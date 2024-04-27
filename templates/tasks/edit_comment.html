@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content%}
+    <h1>Edit comment</h1>
+    <form method="post" action="{% url 'tasks:edit_comment' post.id comment.id %}">
+        {% csrf_token %}
+        {{ edit_form.as_p }}
+        <button type="submit">Save Changes</button>
+    </form>
+{% endblock %}
