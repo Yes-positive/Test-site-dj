@@ -36,7 +36,7 @@ class TaskListView(ListView):
 
 class TaskDetailView(LoginRequiredMixin, DetailView):
     model = models.Task
-    context_object_name = "tasks"
+    context_object_name = "task"
     template_name = "tasks/task_detail.html"
 
     def get_context_data(self, **kwargs):

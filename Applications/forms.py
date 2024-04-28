@@ -10,9 +10,10 @@ class TaskForm(forms.ModelForm):
     def __init__(self, *args, **kwargs):
         super(TaskForm, self).__init__(*args, **kwargs)
         for field in self.fields:
-            self.fields["field"].widget.attrs.update({"class": "form-control"})
+            self.fields[field].widget.attrs.update({"class": "form-control"})
 
-        self.fields["status"].widget.attrs["class"] += "my-custom=datepicker"
+        self.fields["due_date"].widget.attrs["class"] += " my-custom=datepicker"
+
 
 
 class TaskFilterForm(forms.Form):

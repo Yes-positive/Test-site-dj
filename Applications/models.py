@@ -43,4 +43,4 @@ class Like(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        unique_Together = ('comment', 'user')
+        unique_together = ('comment', 'user')
